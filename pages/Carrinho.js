@@ -59,7 +59,7 @@ export default function Carrinho() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundcolor: "#3e3b3bff", padding: 20 },
+  container: { flex: 1, backgroundColor: "#3e3b3b", padding: 20 },
   title: { color: "#6A0DAD", fontSize: 24, fontWeight: "bold", marginBottom: 20, textAlign: "center" },
   item: { flexDirection: "row", alignItems: "center", marginBottom: 15, backgroundColor: "#2b0b45", borderRadius: 8, padding: 8 },
   imagem: { width: 60, height: 60, borderRadius: 8 },

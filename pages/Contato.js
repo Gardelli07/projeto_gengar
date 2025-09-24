@@ -62,12 +62,12 @@ export default function Contato() {
             flex: 1,
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "#3e3b3bff",
+            backgroundColor: "#3e3b3b",
           }}
         >
           <View
             style={{
-              backgroundColor: "#3e3b3bff",
+              backgroundColor: "#3e3b3b",
               padding: 30,
               borderRadius: 10,
               alignItems: "center",
@@ -103,7 +103,7 @@ export default function Contato() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundcolor: "#3e3b3bff",
+    backgroundColor: "#3e3b3b",
     padding: 20,
   },
   title: {

@@ -45,7 +45,7 @@ export default function ProdutoDetalhe({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundcolor: "#3e3b3bff", padding: 20, alignItems: "center" },
+  container: { flex: 1, backgroundColor: "#3e3b3b", padding: 20, alignItems: "center" },
   imagem: { width: 200, height: 200, borderRadius: 10, marginBottom: 20 },
   nome: { color: "#6A0DAD", fontSize: 24, fontWeight: "bold", marginBottom: 10 },
   preco: { color: "#fff", fontSize: 20, marginBottom: 10 },

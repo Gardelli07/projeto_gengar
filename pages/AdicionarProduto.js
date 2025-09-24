@@ -123,20 +123,19 @@ export default function AdicionarProduto({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
-  
   chooseText: {
     position: "absolute",
-    color: "#3e3b3bff",
+    color: "#fff", // texto em branco para ficar legível
     fontWeight: "bold",
     alignSelf: "center",
     bottom: 10,
-    backgroundColor: "#3e3b3bff",
+    backgroundColor: "#3e3b3b", // use 6 dígitos ou rgba para segurança
     paddingHorizontal: 8,
     borderRadius: 4,
-    },
- container: {
+  },
+  container: {
     flex: 1,
-    backgroundcolor: "#3e3b3bff",
+    backgroundColor: "#3e3b3b", // corrigido (camelCase) e sem alpha problemático
     padding: 20,
   },
   title: {
@@ -175,3 +174,4 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
 });
+

@@ -54,7 +54,7 @@ export default function Produtos({ navigation }) {
                 right={() => (
                   <Icon.Button
                     name="cart-plus"
-                    backgroundColor="#3e3b3bff"
+                    backgroundColor="#3e3b3b"
                     underlayColor="transparent"
                     color="#6A0DAD"
                     size={28}
@@ -119,7 +119,7 @@ export default function Produtos({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundcolor: "#3e3b3bff",
+    backgroundColor: "#3e3b3b",
     padding: 20,
   },
   title: {

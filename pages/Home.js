@@ -5,7 +5,7 @@ import { Button } from "react-native-paper";
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.ascii}>
+<Text style={{ color: '#fff' }}>
 {`⣿⣿⡛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢱⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟
 ⣿⣿⣷⠀⠀⠉⠛⠻⢿⣟⢻⣿⠟⢸⠏⠀⢨⣿⠿⠻⢛⣽⠿⠟⠛⠉⠁⠀⢠⣾
 ⣿⣿⣿⣇⠀⠀⠀⠀⠀⠈⠀⠈⠀⠀⠀⠀⠈⠁⠀⠀⠁⠀⠀⠀⠀⠀⠀⣰⣿⣿
@@ -46,7 +46,7 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundcolor: "#3e3b3bff",
+    backgroundColor: "#3e3b3b",
     justifyContent: "center",
     alignItems: "center",
     padding: 20,

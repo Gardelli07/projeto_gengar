@@ -21,7 +21,7 @@ function Tabs() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarStyle: { backgroundcolor: "#3e3b3bff" },
+        tabBarStyle: { backgroundColor: "#3e3b3b" },
         tabBarActiveTintColor: "#6A0DAD",
         tabBarInactiveTintColor: "gray",
         tabBarIcon: ({ color, size }) => {
@@ -56,7 +56,7 @@ export default function App() {
             component={Tabs}
             options={{
               header: () => (
-                <Appbar.Header style={{ backgroundcolor: "#3e3b3bff" }}>
+                <Appbar.Header style={{ backgroundColor: "#3e3b3b" }}>
                   <Appbar.Content
                     title="Loja do Gengar"
                     titleStyle={{ color: "#6A0DAD", fontWeight: "bold" }}
@@ -69,7 +69,7 @@ export default function App() {
             name="AdicionarProduto"
             component={AdicionarProduto}
             options={{
-              headerStyle: { backgroundcolor: "#3e3b3bff" },
+              headerStyle: { backgroundColor: "#3e3b3b" },
               headerTintColor: "#6A0DAD",
               title: "Adicionar Produto",
             }}
@@ -78,7 +78,7 @@ export default function App() {
             name="ProdutoDetalhe"
             component={ProdutoDetalhe}
             options={{
-              headerStyle: { backgroundcolor: "#3e3b3bff" },
+              headerStyle: { backgroundColor: "#3e3b3b" },
               headerTintColor: "#6A0DAD",
               title: "Detalhes do Produto",
             }}
@@ -87,7 +87,7 @@ export default function App() {
             name="Carrinho"
             component={Carrinho}
             options={{
-              headerStyle: { backgroundcolor: "#3e3b3bff" },
+              headerStyle: { backgroundColor: "#3e3b3b" },
               headerTintColor: "#6A0DAD",
               title: "Carrinho",
             }}
