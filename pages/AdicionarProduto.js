@@ -126,11 +126,11 @@ const styles = StyleSheet.create({
   
   chooseText: {
     position: "absolute",
-    color: "#fff",
+    color: "#3e3b3bff",
     fontWeight: "bold",
     alignSelf: "center",
     bottom: 10,
-    backgroundColor: "rgba(0,0,0,0.5)",
+    backgroundColor: "#3e3b3bff",
     paddingHorizontal: 8,
     borderRadius: 4,
     },

@@ -21,7 +21,7 @@ function Tabs() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarStyle: { backgroundcolor: "#fff" },
+        tabBarStyle: { backgroundcolor: "#3e3b3bff" },
         tabBarActiveTintColor: "#6A0DAD",
         tabBarInactiveTintColor: "gray",
         tabBarIcon: ({ color, size }) => {

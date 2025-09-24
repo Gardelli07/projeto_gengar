@@ -62,12 +62,12 @@ export default function Contato() {
             flex: 1,
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            backgroundColor: "#3e3b3bff",
           }}
         >
           <View
             style={{
-              backgroundColor: "#222",
+              backgroundColor: "#3e3b3bff",
               padding: 30,
               borderRadius: 10,
               alignItems: "center",

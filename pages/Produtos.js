@@ -54,7 +54,7 @@ export default function Produtos({ navigation }) {
                 right={() => (
                   <Icon.Button
                     name="cart-plus"
-                    backgroundColor="transparent"
+                    backgroundColor="#3e3b3bff"
                     underlayColor="transparent"
                     color="#6A0DAD"
                     size={28}
