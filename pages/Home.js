@@ -19,7 +19,7 @@ export default function Home({ navigation }) {
           mode="contained"
           onPress={() => navigation.navigate("Produtos")}
           style={styles.button}
-          labelStyle={{ color: "#fff", fontWeight: "bold" }}
+          labelStyle={{ color: "#e8ba44", fontWeight: "900", fontSize: 18 }}
         >
           SOS
         </Button>
@@ -27,7 +27,7 @@ export default function Home({ navigation }) {
           mode="contained"
           onPress={() => navigation.navigate("Produtos")}
           style={styles.button}
-          labelStyle={{ color: "#fff", fontWeight: "bold" }}
+          labelStyle={{ color: "#e8ba44", fontWeight: "900", fontSize: 18 }}
         >
           Blog
         </Button>
@@ -38,7 +38,7 @@ export default function Home({ navigation }) {
           mode="contained"
           onPress={() => navigation.navigate("Produtos")}
           style={styles.button}
-          labelStyle={{ color: "#fff", fontWeight: "bold" }}
+          labelStyle={{ color: "#e8ba44", fontWeight: "900", fontSize: 18 }}
         >
           Treinos
         </Button>
@@ -50,7 +50,7 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#3e3b3b",
+    backgroundColor: "#f3f1f2",
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
-    backgroundColor: "#6A0DAD",
+    backgroundColor: "#1843a9",
     borderRadius: 10,
     paddingHorizontal: 20,
     paddingVertical: 5,

@@ -33,8 +33,6 @@ export default function Blog({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>🏋️ Blog de Treinos</Text>
-
       {botoes.map((b) => (
         <TouchableOpacity
           key={b.id}
@@ -58,25 +56,19 @@ export default function Blog({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#3e3b3b",
-    padding: 20,
-  },
-  title: {
-    fontSize: 26,
-    fontWeight: "bold",
-    color: "#6A0DAD",
-    marginBottom: 20,
-    textAlign: "center",
+    backgroundColor: "#f3f1f2",
+    paddingHorizontal: 14,
+    justifyContent: "center",
   },
   botao: {
     width: "100%",
-    height: 110,
-    borderWidth: 1,
-    borderColor: "#aaa",
+    height: 100,
+    borderWidth: 3, // borda mais visível
+    borderColor: "#e8bb44", // 🔶 borda amarela
     borderRadius: 12,
     overflow: "hidden",
-    marginBottom: 18,
-    backgroundColor: "#2f2d2d",
+    marginBottom: 14,
+    backgroundColor: "#f3f1f2",
   },
   fundoImagem: {
     flex: 1,
@@ -86,13 +78,12 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
   texto: {
-    color: "#fff",
+    color: "#1843a9",
     fontSize: 20,
     fontWeight: "bold",
     position: "absolute",
-    left: 14,
-    bottom: 12,
-    textShadowColor: "rgba(0,0,0,0.6)",
+    left: 12,
+    bottom: 10,
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 2,
   },

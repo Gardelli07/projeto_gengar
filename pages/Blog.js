@@ -13,23 +13,27 @@ export default function Blog({ navigation }) {
       id: 1,
       nome: "Aquecimento",
       imagem: "https://via.placeholder.com/400x200",
+      rota: "BlogAquecimento",
     },
     {
       id: 2,
       nome: "Mobilidade",
       imagem: "https://via.placeholder.com/400x200",
+      rota: "BlogMobilidade",
     },
-    { id: 3, nome: "Força", imagem: "https://via.placeholder.com/400x200" },
+    {
+      id: 3,
+      nome: "Força",
+      imagem: "https://via.placeholder.com/400x200",
+      rota: "BlogForca",
+    },
     {
       id: 4,
       nome: "Propriocepção",
       imagem: "https://via.placeholder.com/400x200",
+      rota: "BlogPropriocepcao",
     },
   ];
-
-  const abrirPost = (nome) => {
-    navigation.navigate("Post", { titulo: nome });
-  };
 
   return (
     <View style={styles.container}>
@@ -38,7 +42,7 @@ export default function Blog({ navigation }) {
           key={b.id}
           style={styles.botao}
           activeOpacity={0.9}
-          onPress={() => abrirPost(b.nome)}
+          onPress={() => navigation.navigate(b.rota)}
         >
           <ImageBackground
             source={{ uri: b.imagem }}
@@ -56,19 +60,19 @@ export default function Blog({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#3e3b3b",
-    paddingHorizontal: 14, // pequena borda lateral
+    backgroundColor: "#f3f1f2",
+    paddingHorizontal: 14,
     justifyContent: "center",
   },
   botao: {
     width: "100%",
     height: 100,
-    borderWidth: 1,
-    borderColor: "#ccc",
+    borderWidth: 3,
+    borderColor: "#e8bb44",
     borderRadius: 12,
     overflow: "hidden",
     marginBottom: 14,
-    backgroundColor: "#2f2d2d",
+    backgroundColor: "#f3f1f2",
   },
   fundoImagem: {
     flex: 1,
@@ -78,13 +82,12 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
   texto: {
-    color: "#fff",
+    color: "#1843a9",
     fontSize: 20,
     fontWeight: "bold",
     position: "absolute",
     left: 12,
     bottom: 10,
-    textShadowColor: "rgba(0,0,0,0.6)",
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 2,
   },
