@@ -13,22 +13,25 @@ export default function Blog({ navigation }) {
       id: 1,
       nome: "Aquecimento",
       imagem: "https://via.placeholder.com/400x200.png?text=Aquecimento",
+      rota: "BlogAquecimento",
     },
     {
       id: 2,
       nome: "Mobilidade",
       imagem: "https://via.placeholder.com/400x200.png?text=Mobilidade",
+      rota: "MobilidadeList", // ✅ nome da rota da lista de mobilidade
     },
     {
       id: 3,
       nome: "Força + Propriocepção",
       imagem:
         "https://via.placeholder.com/400x200.png?text=Força+Propriocepção",
+      rota: "BlogForca", // ou BlogPropriocepcao se desejar separar depois
     },
   ];
 
-  const abrirPost = (titulo) => {
-    navigation.navigate("Post", { titulo });
+  const abrirPost = (rota) => {
+    navigation.navigate(rota);
   };
 
   return (
@@ -38,7 +41,7 @@ export default function Blog({ navigation }) {
           key={b.id}
           style={styles.botao}
           activeOpacity={0.9}
-          onPress={() => abrirPost(b.nome)}
+          onPress={() => abrirPost(b.rota)} // ✅ usa a rota correta
         >
           <ImageBackground
             source={{ uri: b.imagem }}
@@ -63,7 +66,7 @@ const styles = StyleSheet.create({
   botao: {
     width: "100%",
     height: 100,
-    borderWidth: 3, // borda mais visível
+    borderWidth: 3,
     borderColor: "#e8bb44", // 🔶 borda amarela
     borderRadius: 12,
     overflow: "hidden",

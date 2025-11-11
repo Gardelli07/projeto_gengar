@@ -14,6 +14,8 @@ import BlogAquecimento from "./pages/blogaquecimento";
 import BlogMobilidade from "./pages/blogmobilidade";
 import BlogForca from "./pages/blogforca";
 import BlogPropriocepcao from "./pages/blogpropriocepcao";
+import MobilidadeList from "./pages/mobilidadeList";
+import MobilidadeExercise from "./pages/mobilidadeExercise";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -137,6 +139,27 @@ export default function App() {
               title: "Propriocepção",
               headerTintColor: "#1843a9",
               headerStyle: { backgroundColor: "#e8ba44" },
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
+          />
+          <Stack.Screen
+            name="MobilidadeList"
+            component={MobilidadeList}
+            options={{
+              title: "Mobilidade",
+              headerStyle: { backgroundColor: "#e8bb44" },
+              headerTintColor: "#1843a9",
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
+          />
+
+          <Stack.Screen
+            name="MobilidadeExercise"
+            component={MobilidadeExercise}
+            options={{
+              title: "Exercício",
+              headerStyle: { backgroundColor: "#e8bb44" },
+              headerTintColor: "#1843a9",
               headerTitleStyle: { fontWeight: "bold" },
             }}
           />
