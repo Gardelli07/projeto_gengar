@@ -71,7 +71,7 @@ export default function App() {
                   }}
                 >
                   <Appbar.Content
-                    title="Voleizinho"
+                    title="Fisioace"
                     titleStyle={{
                       color: "#1843a9",
                       fontWeight: "bold",
@@ -86,7 +86,7 @@ export default function App() {
             name="Blog"
             component={Blog}
             options={{
-              headerStyle: { backgroundColor: "#f3f1f2" },
+              headerStyle: { backgroundColor: "#e6e6e6ff" },
               headerTintColor: "#1843a9",
               title: "Detalhes do Produto",
             }}
@@ -95,7 +95,7 @@ export default function App() {
             name="Home"
             component={Home}
             options={{
-              headerStyle: { backgroundColor: "#f3f1f2" },
+              headerStyle: { backgroundColor: "#e6e6e6ff" },
               headerTintColor: "#1843a9",
               title: "Detalhes do Produto",
             }}
@@ -103,22 +103,42 @@ export default function App() {
           <Stack.Screen
             name="BlogAquecimento"
             component={BlogAquecimento}
-            options={{ title: "Aquecimento", headerTintColor: "#1843a9" }}
+            options={{
+              title: "Aquecimento",
+              headerTintColor: "#1843a9",
+              headerStyle: { backgroundColor: "#e8ba44" },
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
           />
           <Stack.Screen
             name="BlogMobilidade"
             component={BlogMobilidade}
-            options={{ title: "Mobilidade", headerTintColor: "#1843a9" }}
+            options={{
+              title: "Mobilidade",
+              headerTintColor: "#1843a9",
+              headerStyle: { backgroundColor: "#e8ba44" },
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
           />
           <Stack.Screen
             name="BlogForca"
             component={BlogForca}
-            options={{ title: "Força", headerTintColor: "#1843a9" }}
+            options={{
+              title: "Força",
+              headerTintColor: "#1843a9",
+              headerStyle: { backgroundColor: "#e8ba44" },
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
           />
           <Stack.Screen
             name="BlogPropriocepcao"
             component={BlogPropriocepcao}
-            options={{ title: "Propriocepção", headerTintColor: "#1843a9" }}
+            options={{
+              title: "Propriocepção",
+              headerTintColor: "#1843a9",
+              headerStyle: { backgroundColor: "#e8ba44" },
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>

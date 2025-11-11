@@ -8,7 +8,7 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       {/* GIF acima dos botões */}
       <Image
-        source={require("../assets/home.gif")}
+        source={require("../assets/home.jpg")}
         style={styles.gif}
         contentFit="contain"
         transition={1000}
@@ -17,7 +17,7 @@ export default function Home({ navigation }) {
       <View style={styles.topRow}>
         <Button
           mode="contained"
-          onPress={() => navigation.navigate("Produtos")}
+          onPress={() => navigation.navigate("SOS")}
           style={styles.button}
           labelStyle={{ color: "#e8ba44", fontWeight: "900", fontSize: 18 }}
         >
@@ -25,7 +25,7 @@ export default function Home({ navigation }) {
         </Button>
         <Button
           mode="contained"
-          onPress={() => navigation.navigate("Produtos")}
+          onPress={() => navigation.navigate("Blog")}
           style={styles.button}
           labelStyle={{ color: "#e8ba44", fontWeight: "900", fontSize: 18 }}
         >
@@ -36,7 +36,7 @@ export default function Home({ navigation }) {
       <View style={styles.bottomRow}>
         <Button
           mode="contained"
-          onPress={() => navigation.navigate("Produtos")}
+          onPress={() => navigation.navigate("Treinos")}
           style={styles.button}
           labelStyle={{ color: "#e8ba44", fontWeight: "900", fontSize: 18 }}
         >
@@ -50,15 +50,16 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f3f1f2",
+    backgroundColor: "#e6e6e6ff",
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
   },
   gif: {
-    width: 200, // largura do gif
-    height: 200, // altura do gif
+    width: 350, // largura do gif
+    height: 350, // altura do gif
     marginBottom: 30, // espaço entre o gif e os botões
+    borderRadius: 60,
   },
   topRow: {
     flexDirection: "row",

@@ -60,7 +60,7 @@ export default function Blog({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f3f1f2",
+    backgroundColor: "#e6e6e6ff",
     paddingHorizontal: 14,
     justifyContent: "center",
   },
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     overflow: "hidden",
     marginBottom: 14,
-    backgroundColor: "#f3f1f2",
+    backgroundColor: "#e6e6e6ff",
   },
   fundoImagem: {
     flex: 1,

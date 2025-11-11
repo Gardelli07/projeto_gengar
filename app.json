@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "voleizinho",
-    "slug": "voleizinho",
+    "name": "fisioace",
+    "slug": "fisioace",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "",
       "resizeMode": "contain",
       "backgroundColor": "#000000"
     },

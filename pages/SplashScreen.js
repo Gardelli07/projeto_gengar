@@ -11,8 +11,8 @@ export default function SplashScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Image source={require("../assets/logo.png")} style={styles.logo} />
-      <Text style={styles.title}>Voleizinho</Text>
+      <Image source={require("../assets/home.gif")} style={styles.logo} />
+      <Text style={styles.title}>Fisioace</Text>
     </View>
   );
 }
@@ -20,7 +20,7 @@ export default function SplashScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#3e3b3b",
+    backgroundColor: "#1843a9",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   title: {
-    color: "#6A0DAD",
+    color: "#e8ba44",
     fontSize: 28,
     fontWeight: "bold",
   },
