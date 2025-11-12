@@ -11,11 +11,15 @@ import SOS from "./pages/SOS";
 import SplashScreen from "./pages/SplashScreen";
 import Blog from "./pages/Blog";
 import BlogAquecimento from "./pages/blogaquecimento";
-import BlogMobilidade from "./pages/blogmobilidade";
+import BlogAlongamento from "./pages/blogalongamento";
 import BlogForca from "./pages/blogforca";
 import BlogPropriocepcao from "./pages/blogpropriocepcao";
 import MobilidadeList from "./pages/mobilidadeList";
 import MobilidadeExercise from "./pages/mobilidadeExercise";
+import AquecimentoList from "./pages/AquecimentoList";
+import AquecimentoExercise from "./pages/AquecimentoExercise";
+import ForcaPropriocepcaoList from "./pages/ForcaPropriocepcaoList";
+import ForcaPropriocepcaoExercise from "./pages/ForcaPropriocepcaoExercise";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -113,10 +117,10 @@ export default function App() {
             }}
           />
           <Stack.Screen
-            name="BlogMobilidade"
-            component={BlogMobilidade}
+            name="BlogAlongamento"
+            component={BlogAlongamento}
             options={{
-              title: "Mobilidade",
+              title: "Alongamento",
               headerTintColor: "#1843a9",
               headerStyle: { backgroundColor: "#e8ba44" },
               headerTitleStyle: { fontWeight: "bold" },
@@ -156,6 +160,48 @@ export default function App() {
           <Stack.Screen
             name="MobilidadeExercise"
             component={MobilidadeExercise}
+            options={{
+              title: "Exercício",
+              headerStyle: { backgroundColor: "#e8bb44" },
+              headerTintColor: "#1843a9",
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
+          />
+          <Stack.Screen
+            name="AquecimentoList"
+            component={AquecimentoList}
+            options={{
+              title: "Aquecimento",
+              headerStyle: { backgroundColor: "#e8bb44" },
+              headerTintColor: "#1843a9",
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
+          />
+
+          <Stack.Screen
+            name="AquecimentoExercise"
+            component={AquecimentoExercise}
+            options={{
+              title: "Exercício",
+              headerStyle: { backgroundColor: "#e8bb44" },
+              headerTintColor: "#1843a9",
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
+          />
+          <Stack.Screen
+            name="ForcaPropriocepcaoList"
+            component={ForcaPropriocepcaoList}
+            options={{
+              title: "Força e Propriocepção",
+              headerStyle: { backgroundColor: "#e8bb44" },
+              headerTintColor: "#1843a9",
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
+          />
+
+          <Stack.Screen
+            name="ForcaPropriocepcaoExercise"
+            component={ForcaPropriocepcaoExercise}
             options={{
               title: "Exercício",
               headerStyle: { backgroundColor: "#e8bb44" },

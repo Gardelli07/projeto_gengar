@@ -7,51 +7,59 @@ import {
 } from "react-native";
 import { Text } from "react-native-paper";
 
-export default function Blog({ navigation }) {
+export default function Treinos({ navigation }) {
   const botoes = [
     {
       id: 1,
       nome: "Aquecimento",
       imagem: "https://via.placeholder.com/400x200.png?text=Aquecimento",
-      rota: "BlogAquecimento",
+      rota: "AquecimentoList", // 🔹 ajuste a rota conforme o nome no seu navigation
     },
     {
       id: 2,
       nome: "Mobilidade",
       imagem: "https://via.placeholder.com/400x200.png?text=Mobilidade",
-      rota: "MobilidadeList", // ✅ nome da rota da lista de mobilidade
+      rota: "MobilidadeList",
     },
     {
       id: 3,
       nome: "Força + Propriocepção",
       imagem:
         "https://via.placeholder.com/400x200.png?text=Força+Propriocepção",
-      rota: "BlogForca", // ou BlogPropriocepcao se desejar separar depois
+      rota: "ForcaPropriocepcaoList",
     },
   ];
 
-  const abrirPost = (rota) => {
+  const abrirTreino = (rota) => {
     navigation.navigate(rota);
   };
 
   return (
     <View style={styles.container}>
-      {botoes.map((b) => (
-        <TouchableOpacity
-          key={b.id}
-          style={styles.botao}
-          activeOpacity={0.9}
-          onPress={() => abrirPost(b.rota)} // ✅ usa a rota correta
-        >
-          <ImageBackground
-            source={{ uri: b.imagem }}
-            style={styles.fundoImagem}
-            imageStyle={styles.imagem}
+      {/* Cabeçalho */}
+      <View style={styles.header}>
+        <Text style={styles.titulo}>Treinos</Text>
+      </View>
+
+      {/* Botões */}
+      <View style={styles.conteudo}>
+        {botoes.map((b) => (
+          <TouchableOpacity
+            key={b.id}
+            style={styles.botao}
+            activeOpacity={0.9}
+            onPress={() => abrirTreino(b.rota)}
           >
-            <Text style={styles.texto}>{b.nome}</Text>
-          </ImageBackground>
-        </TouchableOpacity>
-      ))}
+            <ImageBackground
+              source={{ uri: b.imagem }}
+              style={styles.fundoImagem}
+              imageStyle={styles.imagem}
+            >
+              <Text style={styles.texto}>{b.nome}</Text>
+            </ImageBackground>
+          </TouchableOpacity>
+        ))}
+      </View>
     </View>
   );
 }
@@ -60,14 +68,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#e6e6e6ff",
-    paddingHorizontal: 14,
+  },
+  header: {
+    backgroundColor: "#e6e6e6ff",
+    paddingVertical: 16,
+    alignItems: "center",
     justifyContent: "center",
+  },
+  titulo: {
+    fontSize: 26,
+    fontWeight: "bold",
+    color: "#1843a9",
+  },
+  conteudo: {
+    flex: 1,
+    paddingHorizontal: 14,
+    paddingTop: 20,
   },
   botao: {
     width: "100%",
     height: 100,
     borderWidth: 3,
-    borderColor: "#e8bb44", // 🔶 borda amarela
+    borderColor: "#e8bb44",
     borderRadius: 12,
     overflow: "hidden",
     marginBottom: 14,

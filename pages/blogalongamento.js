@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 export default function BlogAquecimento() {
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Mobilidade</Text>
+      <Text style={styles.titulo}>Alongamento</Text>
       <Text style={styles.texto}>
         É composto por exercícios focados em alongar os músculos e tendões para
         aumentar a flexibilidade e a amplitude de movimento das articulações.
