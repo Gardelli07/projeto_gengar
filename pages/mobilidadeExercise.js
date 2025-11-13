@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, Text, StyleSheet, Image, Alert } from "react-native";
+import { View, Text, StyleSheet, Alert } from "react-native";
+import { Image } from "expo-image";
 import { Button } from "react-native-paper";
 
 export default function MobilidadeExercise({ route, navigation }) {
@@ -16,13 +17,12 @@ export default function MobilidadeExercise({ route, navigation }) {
   const [finished, setFinished] = useState(false);
 
   useEffect(() => {
-    // when exercise changes, reset timer/flags
     setRunning(false);
     setFinished(false);
     setRemaining(exercise?.type === "time" ? exercise.value : 0);
     clearInterval(intervalRef.current);
     return () => clearInterval(intervalRef.current);
-  }, [currentIndex]);
+  }, [currentIndex, exercise?.value, exercise?.type]);
 
   useEffect(() => {
     if (running && exercise?.type === "time") {
@@ -39,7 +39,7 @@ export default function MobilidadeExercise({ route, navigation }) {
       }, 1000);
     }
     return () => clearInterval(intervalRef.current);
-  }, [running]);
+  }, [running, exercise?.type]);
 
   function handleStartTimer() {
     if (exercise?.type !== "time") return;
@@ -48,7 +48,6 @@ export default function MobilidadeExercise({ route, navigation }) {
   }
 
   function handleCompleteReps() {
-    // For reps: simply mark as completed and go next
     goNext();
   }
 
@@ -77,15 +76,39 @@ export default function MobilidadeExercise({ route, navigation }) {
     );
   }
 
+  // aceita tanto `image` (string/url) quanto `imagem` (require number)
+  const raw = exercise.image ?? exercise.imagem ?? null;
+  const source = typeof raw === "number" ? raw : raw ? { uri: raw } : null;
+  // key força reload quando trocar de exercício (ajuda GIF a reiniciar)
+  const imageKey = `img-${currentIndex}-${
+    typeof source === "object" ? source.uri : String(source)
+  }`;
+
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>{exercise.nome}</Text>
 
-      <Image
-        source={{ uri: exercise.image }}
-        style={styles.image}
-        resizeMode="cover"
-      />
+      {source ? (
+        <Image
+          key={imageKey}
+          source={source}
+          style={styles.image}
+          contentFit="cover"
+          // evita usar versão estática do cache
+          cachePolicy="none"
+          // remova transition para não "congelar" frame inicial
+          transition={0}
+        />
+      ) : (
+        <View
+          style={[
+            styles.image,
+            { justifyContent: "center", alignItems: "center" },
+          ]}
+        >
+          <Text style={{ color: "#666" }}>Sem imagem</Text>
+        </View>
+      )}
 
       <Text style={styles.desc}>{exercise.desc}</Text>
 
@@ -156,10 +179,11 @@ const styles = StyleSheet.create({
   },
   image: {
     width: "100%",
-    height: 220,
+    height: 450,
     borderRadius: 12,
     marginBottom: 12,
     backgroundColor: "#ddd",
+    overflow: "hidden",
   },
   desc: { fontSize: 16, color: "#333", lineHeight: 22, marginBottom: 14 },
   footer: { alignItems: "center" },

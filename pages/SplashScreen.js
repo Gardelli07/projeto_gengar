@@ -11,7 +11,7 @@ export default function SplashScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Image source={require("../assets/home.gif")} style={styles.logo} />
+      <Image source={require("../assets/fisioace.png")} style={styles.logo} />
       <Text style={styles.title}>Fisioace</Text>
     </View>
   );
