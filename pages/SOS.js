@@ -4,7 +4,9 @@ import { View, Text, StyleSheet, ScrollView } from "react-native";
 export default function BlogAquecimento() {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-      <Text style={styles.titulo}>SOS VÔLEI — Prevenir e Socorrer Lesões</Text>
+      <Text style={styles.titulo}>
+        SOS VÔLEI {"\n"}Prevenir e Socorrer Lesões
+      </Text>
 
       <Text style={styles.subtitulo}>Como Prevenir Lesões:</Text>
 

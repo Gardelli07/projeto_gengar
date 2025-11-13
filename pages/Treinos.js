@@ -13,22 +13,18 @@ export default function Treinos({ navigation }) {
       id: 1,
       nome: "Aquecimento",
       emoji: "🔥",
-      imagem: "https://via.placeholder.com/400x200.png?text=Aquecimento",
       rota: "AquecimentoList",
     },
     {
       id: 2,
       nome: "Mobilidade",
       emoji: "🤸‍♀️",
-      imagem: "https://via.placeholder.com/400x200.png?text=Mobilidade",
       rota: "MobilidadeList",
     },
     {
       id: 3,
       nome: "Força + Propriocepção",
       emoji: "💪",
-      imagem:
-        "https://via.placeholder.com/400x200.png?text=Força+Propriocepção",
       rota: "ForcaPropriocepcaoList",
     },
   ];
