@@ -139,9 +139,7 @@ export default function MobilidadeList({ navigation }) {
               source={source}
               style={styles.thumbnail}
               contentFit="cover"
-              // força recarga/evita usar versão estática do cache
               cachePolicy="none"
-              // small key não estrangulará perfomance, ajuda a forçar reload quando mudar source
               key={typeof source === "object" ? source.uri : String(source)}
             />
           ) : (
@@ -157,7 +155,7 @@ export default function MobilidadeList({ navigation }) {
 
           <View style={{ flex: 1 }}>
             <Text style={styles.title}>{item.nome}</Text>
-            <Text style={styles.subtitle}>{item.value} repetições</Text>
+            <Text style={styles.subtitle}>{item.value} reps • cada lado </Text>
           </View>
         </View>
       </View>
@@ -172,9 +170,7 @@ export default function MobilidadeList({ navigation }) {
         renderItem={renderItem}
         contentContainerStyle={{ paddingBottom: 20 }}
         ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
-        // evita que o RN descarte/recicle views (padrão pode congelar GIFs)
         removeClippedSubviews={false}
-        // ajustes de renderização inicial para reduzir mount/unmount agressivo
         initialNumToRender={6}
         windowSize={7}
       />
@@ -211,10 +207,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingHorizontal: 12,
   },
-  cardContent: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
+  cardContent: { flexDirection: "row", alignItems: "center" },
   thumbnail: {
     width: 80,
     height: 80,

@@ -8,7 +8,6 @@ export default function MobilidadeExercise({ route, navigation }) {
   const [currentIndex, setCurrentIndex] = useState(index);
   const exercise = exercises[currentIndex];
 
-  // Timer state
   const [running, setRunning] = useState(false);
   const [remaining, setRemaining] = useState(
     exercise?.type === "time" ? exercise.value : 0
@@ -76,10 +75,8 @@ export default function MobilidadeExercise({ route, navigation }) {
     );
   }
 
-  // aceita tanto `image` (string/url) quanto `imagem` (require number)
   const raw = exercise.image ?? exercise.imagem ?? null;
   const source = typeof raw === "number" ? raw : raw ? { uri: raw } : null;
-  // key força reload quando trocar de exercício (ajuda GIF a reiniciar)
   const imageKey = `img-${currentIndex}-${
     typeof source === "object" ? source.uri : String(source)
   }`;
@@ -94,9 +91,7 @@ export default function MobilidadeExercise({ route, navigation }) {
           source={source}
           style={styles.image}
           contentFit="cover"
-          // evita usar versão estática do cache
           cachePolicy="none"
-          // remova transition para não "congelar" frame inicial
           transition={0}
         />
       ) : (
@@ -115,7 +110,10 @@ export default function MobilidadeExercise({ route, navigation }) {
       <View style={styles.footer}>
         {exercise.type === "reps" ? (
           <>
-            <Text style={styles.info}>{exercise.value} repetições</Text>
+            {/* 👇 AQUI foi adicionado “(cada lado)” */}
+            <Text style={styles.info}>
+              {exercise.value} repetições (cada lado)
+            </Text>
             <Button
               mode="contained"
               onPress={handleCompleteReps}

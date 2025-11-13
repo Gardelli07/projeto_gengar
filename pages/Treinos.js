@@ -12,18 +12,21 @@ export default function Treinos({ navigation }) {
     {
       id: 1,
       nome: "Aquecimento",
+      emoji: "🔥",
       imagem: "https://via.placeholder.com/400x200.png?text=Aquecimento",
-      rota: "AquecimentoList", // 🔹 ajuste a rota conforme o nome no seu navigation
+      rota: "AquecimentoList",
     },
     {
       id: 2,
       nome: "Mobilidade",
+      emoji: "🤸‍♀️",
       imagem: "https://via.placeholder.com/400x200.png?text=Mobilidade",
       rota: "MobilidadeList",
     },
     {
       id: 3,
       nome: "Força + Propriocepção",
+      emoji: "💪",
       imagem:
         "https://via.placeholder.com/400x200.png?text=Força+Propriocepção",
       rota: "ForcaPropriocepcaoList",
@@ -36,12 +39,10 @@ export default function Treinos({ navigation }) {
 
   return (
     <View style={styles.container}>
-      {/* Cabeçalho */}
       <View style={styles.header}>
         <Text style={styles.titulo}>Treinos</Text>
       </View>
 
-      {/* Botões */}
       <View style={styles.conteudo}>
         {botoes.map((b) => (
           <TouchableOpacity
@@ -55,7 +56,11 @@ export default function Treinos({ navigation }) {
               style={styles.fundoImagem}
               imageStyle={styles.imagem}
             >
-              <Text style={styles.texto}>{b.nome}</Text>
+              <View style={styles.textBox}>
+                <Text style={styles.texto}>
+                  {b.emoji} {b.nome}
+                </Text>
+              </View>
             </ImageBackground>
           </TouchableOpacity>
         ))}
@@ -87,29 +92,31 @@ const styles = StyleSheet.create({
   },
   botao: {
     width: "100%",
-    height: 100,
+    height: 110,
     borderWidth: 3,
     borderColor: "#e8bb44",
-    borderRadius: 12,
+    borderRadius: 14,
     overflow: "hidden",
-    marginBottom: 14,
-    backgroundColor: "#e6e6e6ff",
+    marginBottom: 16,
+    backgroundColor: "#f2f2f2",
   },
   fundoImagem: {
     flex: 1,
-    justifyContent: "flex-end",
+    justifyContent: "center",
   },
   imagem: {
     resizeMode: "cover",
   },
+  textBox: {
+    alignItems: "center",
+    justifyContent: "center",
+    flex: 1,
+  },
   texto: {
     color: "#1843a9",
-    fontSize: 20,
+    fontSize: 26, // 🔹 texto maior
     fontWeight: "bold",
-    position: "absolute",
-    left: 12,
-    bottom: 10,
-    textShadowOffset: { width: 0, height: 1 },
-    textShadowRadius: 2,
+    textAlign: "center",
+    lineHeight: 34, // 🔹 melhora o espaçamento vertical
   },
 });
