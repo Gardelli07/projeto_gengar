@@ -4,7 +4,7 @@
     "slug": "fisioace",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.png",
+    "icon": "./assets/fisioace.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "",
@@ -16,12 +16,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo.png",
+        "foregroundImage": "./assets/fisioace.png",
         "backgroundColor": "#000000"
       }
     },
     "web": {
-      "favicon": "./assets/logo.png"
+      "favicon": "./assets/fisioace.png"
     }
   }
 }

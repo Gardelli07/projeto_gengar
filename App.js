@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import BlogAquecimento from "./pages/blogaquecimento";
 import BlogAlongamento from "./pages/blogalongamento";
 import BlogForca from "./pages/blogforca";
+import BlogMobilidade from "./pages/blogmobilidade";
 import BlogPropriocepcao from "./pages/blogpropriocepcao";
 import MobilidadeList from "./pages/mobilidadeList";
 import MobilidadeExercise from "./pages/mobilidadeExercise";
@@ -139,6 +140,16 @@ export default function App() {
           <Stack.Screen
             name="BlogPropriocepcao"
             component={BlogPropriocepcao}
+            options={{
+              title: "Propriocepção",
+              headerTintColor: "#1843a9",
+              headerStyle: { backgroundColor: "#e8ba44" },
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
+          />
+          <Stack.Screen
+            name="BlogMobilidade"
+            component={BlogMobilidade}
             options={{
               title: "Propriocepção",
               headerTintColor: "#1843a9",

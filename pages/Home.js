@@ -8,7 +8,7 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       {/* GIF acima dos botões */}
       <Image
-        source={require("../assets/home.jpg")}
+        source={require("../assets/home.png")}
         style={styles.gif}
         contentFit="contain"
         transition={1000}
