@@ -12,7 +12,8 @@ import { Image } from "expo-image";
 
 /** cria sequência timed (series + work + optional rest) — só para type === "time" com series */
 function buildTimedSequence(ex) {
-  if (!ex) return [];
+  if (!ex || ex.type !== "time") return [];
+
   // aceita ex.segments (caso você use)
   if (Array.isArray(ex.segments) && ex.segments.length) {
     return ex.segments.map((s, i) => ({
@@ -22,7 +23,7 @@ function buildTimedSequence(ex) {
     }));
   }
 
-  if (ex.type === "time" && Number.isFinite(ex.series)) {
+  if (Number.isFinite(ex.series)) {
     const seq = [];
     const series = Math.max(1, Math.floor(ex.series));
     const work = Number.isFinite(ex.work)
@@ -276,7 +277,7 @@ export default function ForcaPropriocepcaoExercise({ route, navigation }) {
           )}
 
           {/* MODO TIMED (work/rest automático) */}
-          {isTimedMode && (
+          {exercise.type === "time" && isTimedMode && (
             <>
               <Text style={{ color: "#666", marginBottom: 6 }}>
                 {segmentIndex + 1}/{seq.length} • {currentSeg?.label}

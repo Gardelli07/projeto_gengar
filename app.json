@@ -18,10 +18,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/fisioace.png",
         "backgroundColor": "#000000"
-      }
+      },
+      "package": "com.shironora.Fisioace"
     },
     "web": {
       "favicon": "./assets/fisioace.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7fd677cd-cd66-4cd9-996e-18dde394fe21"
+      }
     }
   }
 }
