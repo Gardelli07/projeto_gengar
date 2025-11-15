@@ -1,5 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
+
+// FontAwesome React Native
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import {
+  faBookMedical,
+  faTriangleExclamation,
+  faSuitcaseMedical,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function BlogAquecimento() {
   return (
@@ -10,68 +18,163 @@ export default function BlogAquecimento() {
 
       <Text style={styles.subtitulo}>Como Prevenir Lesões:</Text>
 
-      <Text style={styles.item}>
-        <Text style={styles.numero}>1. Cuidados constantes{"\n"}</Text>• Use
-        tênis com bom amortecimento e solado firme.{"\n"}• Evite jogar em
-        superfície irregular ou escorregadia.{"\n"}• Hidrate-se antes, durante e
-        depois do jogo.
-      </Text>
+      {/* 1 */}
+      <View style={styles.item}>
+        <View style={styles.linhaTitulo}>
+          <Text style={styles.numero}>1. Cuidados constantes</Text>
+          <FontAwesomeIcon icon={faBookMedical} size={18} />
+        </View>
 
-      <Text style={styles.item}>
-        <Text style={styles.numero}>2. Atenção aos sinais do corpo{"\n"}</Text>•{" "}
-        <Text style={styles.negrito}>Dor leve e passageira:</Text> observe e
-        reduza o esforço.{"\n"}•{" "}
-        <Text style={styles.negrito}>Dor persistente:</Text> pare o jogo,
-        aplique gelo e procure um profissional.{"\n"}
-        Ignorar dor é o erro mais comum no vôlei.
-      </Text>
+        <Text style={styles.bullet}>
+          • Use tênis com bom amortecimento e solado firme.
+        </Text>
+        <Text style={styles.bullet}>
+          • Evite jogar em superfície irregular ou escorregadia.
+        </Text>
+        <Text style={styles.bullet}>
+          • Hidrate-se antes, durante e depois do jogo.
+        </Text>
+
+        <Image
+          source={require("../assets/hidrata.jpg")}
+          style={styles.imagem}
+          resizeMode="cover"
+        />
+      </View>
+
+      {/* 2 */}
+      <View style={styles.item}>
+        <View style={styles.linhaTitulo}>
+          <Text style={styles.numero}>2. Atenção aos sinais do corpo</Text>
+          <FontAwesomeIcon icon={faTriangleExclamation} size={18} />
+        </View>
+
+        <Text style={styles.bullet}>
+          • <Text style={styles.negrito}>Dor leve e passageira:</Text> observe e
+          reduza o esforço.
+        </Text>
+        <Text style={styles.bullet}>
+          • <Text style={styles.negrito}>Dor persistente:</Text> pare o jogo,
+          aplique gelo e procure um profissional.
+        </Text>
+        <Text style={[styles.bullet, { marginTop: 6 }]}>
+          Ignorar dor é o erro mais comum no vôlei.
+        </Text>
+      </View>
 
       <Text style={styles.subtitulo}>
-        Socorro Rápido (durante ou após o jogo)
+        Socorro Rápido {"\n"}(durante ou após o jogo)
       </Text>
 
-      <Text style={styles.item}>
-        <Text style={styles.numero}>
-          1. Entorse ou torção (tornozelo, joelho){"\n"}
-        </Text>
+      {/* 1 - RICE */}
+      <View style={styles.item}>
+        <Text style={styles.numero}>1. Entorse ou torção</Text>
+
         <Text style={styles.negrito}>SOS imediato: método RICE</Text>
-        {"\n"}R – Repouso: pare o jogo.{"\n"}I – Ice (gelo): aplique 15–20 min,
-        a cada 2h nas primeiras 24h.{"\n"}C – Compressão: enfaixe com faixa
-        elástica, sem apertar demais.{"\n"}E – Elevação: mantenha o membro
-        elevado.{"\n"}
-        Se houver inchaço intenso ou dor forte → procurar pronto atendimento.
-      </Text>
 
-      <Text style={styles.item}>
-        <Text style={styles.numero}>2. Dor muscular ou cãibra{"\n"}</Text>• Pare
-        o esforço e alongue o músculo afetado.{"\n"}• Beba água ou isotônico.
-        {"\n"}• Faça massagem leve e aplique calor morno se persistir.{"\n"}
-        <Text style={styles.negrito}>Prevenção:</Text> boa hidratação e
-        alimentação com potássio (banana, água de coco).
-      </Text>
-
-      <Text style={styles.item}>
-        <Text style={styles.numero}>3. Impacto ou queda{"\n"}</Text>• Aplique
-        gelo imediato na área.{"\n"}• Se houver hematoma, evite calor nas
-        primeiras 48h.{"\n"}• Mantenha repouso relativo.
-      </Text>
-
-      <Text style={styles.item}>
-        <Text style={styles.numero}>
-          4. Dores no ombro (muito comum em saque e ataque){"\n"}
+        <Text style={styles.bullet}>R – Repouso: pare o jogo.</Text>
+        <Text style={styles.bullet}>
+          I – Ice (gelo): aplique 15–20 min, a cada 2h nas primeiras 24h.
         </Text>
-        • Pausa imediata.{"\n"}• Compressa gelada por 15–20 min.{"\n"}• Evite
-        movimentos acima da cabeça até melhora.{"\n"}
-        Se persistir, procure fisioterapeuta ou ortopedista.
-      </Text>
+        <Text style={styles.bullet}>
+          C – Compressão: enfaixe com faixa elástica, sem apertar demais.
+        </Text>
+        <Text style={styles.bullet}>
+          E – Elevação: mantenha o membro elevado.
+        </Text>
 
-      <Text style={styles.item}>
-        <Text style={styles.numero}>5. Situações de emergência{"\n"}</Text>•
-        Queda com suspeita de fratura: imobilize e chame ambulância.{"\n"}•
-        Tontura, falta de ar, palpitação: interrompa o jogo e busque socorro
-        médico.
-      </Text>
-      <ScrollView contentContainerStyle={{ marginBottom: 25 }}></ScrollView>
+        <Text style={[styles.bullet, { marginTop: 6 }]}>
+          Se houver inchaço intenso ou dor forte → procurar pronto atendimento.
+        </Text>
+
+        <Image
+          source={require("../assets/gelo1.jpg")}
+          style={styles.imagem}
+          resizeMode="cover"
+        />
+      </View>
+
+      {/* 2 */}
+      <View style={styles.item}>
+        <Text style={styles.numero}>2. Dor muscular ou cãibra</Text>
+
+        <Text style={styles.bullet}>
+          • Pare o esforço e alongue o músculo afetado.
+        </Text>
+        <Text style={styles.bullet}>• Beba água ou isotônico.</Text>
+        <Text style={styles.bullet}>
+          • Faça massagem leve e aplique calor morno se persistir.
+        </Text>
+        <Text style={[styles.bullet, { marginTop: 6 }]}>
+          <Text style={styles.negrito}>Prevenção:</Text> boa hidratação e
+          alimentação com potássio (banana, água de coco).
+        </Text>
+
+        <Image
+          source={require("../assets/caimbra.jpg")}
+          style={styles.imagem}
+          resizeMode="cover"
+        />
+      </View>
+
+      {/* 3 */}
+      <View style={styles.item}>
+        <Text style={styles.numero}>3. Impacto ou queda</Text>
+
+        <Text style={styles.bullet}>• Aplique gelo imediato na área.</Text>
+        <Text style={styles.bullet}>
+          • Se houver hematoma, evite calor nas primeiras 48h.
+        </Text>
+        <Text style={styles.bullet}>• Mantenha repouso relativo.</Text>
+
+        <Image
+          source={require("../assets/gelo.jpg")}
+          style={styles.imagem}
+          resizeMode="cover"
+        />
+      </View>
+
+      {/* 4 */}
+      <View style={styles.item}>
+        <Text style={styles.numero}>
+          4. Dores no ombro{"\n"} (muito comum em saque e ataque)
+        </Text>
+
+        <Text style={styles.parenteses}>
+          (frequente em movimentações repetitivas acima da cabeça)
+        </Text>
+
+        <Text style={styles.bullet}>• Pausa imediata.</Text>
+        <Text style={styles.bullet}>• Compressa gelada por 15–20 min.</Text>
+        <Text style={styles.bullet}>
+          • Evite movimentos acima da cabeça até melhora.
+        </Text>
+        <Text style={[styles.bullet, { marginTop: 6 }]}>
+          Se persistir, procure fisioterapeuta ou ortopedista.
+        </Text>
+      </View>
+
+      {/* 5 */}
+      <View style={styles.item}>
+        <View style={styles.linhaTitulo}>
+          <Text style={styles.numero}>5. Situações de emergência</Text>
+          <FontAwesomeIcon icon={faSuitcaseMedical} size={18} />
+        </View>
+
+        <Text style={styles.bullet}>
+          • Queda com suspeita de fratura: imobilize e chame ambulância.
+        </Text>
+        <Text style={styles.bullet}>
+          • Tontura, falta de ar, palpitação: interrompa o jogo e busque socorro
+          médico.
+        </Text>
+      </View>
+
+      <View style={styles.iconCentral}>
+        <Text style={styles.emojiGrande}>🚑</Text>
+      </View>
+
+      <View style={{ height: 40 }} />
     </ScrollView>
   );
 }
@@ -87,7 +190,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#1843a9",
     textAlign: "center",
-    marginBottom: 20,
+    marginBottom: 8,
   },
   subtitulo: {
     fontSize: 20,
@@ -96,17 +199,54 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     marginTop: 10,
   },
+
+  /* NOVO — alinhamento dos ícones */
+  linhaTitulo: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    marginBottom: 6,
+  },
+
   item: {
-    fontSize: 16,
-    color: "#333",
     marginBottom: 14,
-    lineHeight: 24,
   },
   numero: {
     fontWeight: "bold",
     color: "#1843a9",
+    fontSize: 16,
   },
   negrito: {
     fontWeight: "bold",
+  },
+  bullet: {
+    fontSize: 16,
+    color: "#333",
+    lineHeight: 22,
+    marginLeft: 4,
+    marginTop: 4,
+  },
+  imagem: {
+    width: "60%",
+    height: 200,
+    borderRadius: 8,
+    marginTop: 10,
+    rowGap: 10,
+    alignSelf: "center",
+    //borderRadius: 300,
+  },
+  parenteses: {
+    fontSize: 14,
+    color: "#666",
+    fontStyle: "italic",
+    marginTop: 4,
+  },
+  iconCentral: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginVertical: 18,
+  },
+  emojiGrande: {
+    fontSize: 60,
   },
 });
