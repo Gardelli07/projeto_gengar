@@ -4,25 +4,25 @@
     "slug": "Fisioace",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/fisioace.png",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/fisioace.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#000000"
     },
     "ios": {
       "supportsTablet": true,
-      "icon": "./assets/fisioace.png",
+      "icon": "./assets/logo.png",
       "bundleIdentifier": "com.shironora.Fisioace",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
-      "icon": "./assets/fisioace.png",
+      "icon": "./assets/logo.png",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/fisioace.png",
+        "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#000000"
       },
       "splash": {
@@ -34,7 +34,7 @@
       "package": "com.shironora.Fisioace"
     },
     "web": {
-      "favicon": "./assets/fisioace.png"
+      "favicon": "./assets/logo.png"
     },
     "extra": {
       "eas": {
