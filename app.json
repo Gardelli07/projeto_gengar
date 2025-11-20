@@ -7,17 +7,29 @@
     "icon": "./assets/fisioace.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "",
+      "image": "./assets/fisioace.png",
       "resizeMode": "contain",
       "backgroundColor": "#000000"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon": "./assets/fisioace.png",
+      "bundleIdentifier": "com.shironora.Fisioace",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
+      "icon": "./assets/fisioace.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/fisioace.png",
         "backgroundColor": "#000000"
+      },
+      "splash": {
+        "image": "./assets/fisioace.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#000000",
+        "imageWidth": 200
       },
       "package": "com.shironora.Fisioace"
     },

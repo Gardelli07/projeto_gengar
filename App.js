@@ -10,6 +10,7 @@ import Treinos from "./pages/Treinos";
 import SOS from "./pages/SOS";
 import SplashScreen from "./pages/SplashScreen";
 import Blog from "./pages/Blog";
+import Nós from "./pages/Nós";
 import BlogAquecimento from "./pages/blogaquecimento";
 import BlogAlongamento from "./pages/blogalongamento";
 import BlogForca from "./pages/blogforca";
@@ -30,16 +31,18 @@ function Tabs() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarStyle: { backgroundColor: "#1942ab" }, // fundo azul
-        tabBarActiveTintColor: "#e2ca80ff", // selecionado branco
-        tabBarInactiveTintColor: "#e0b336ff", // inativo amarelo
+        tabBarStyle: { backgroundColor: "#1942ab" },
+        tabBarActiveTintColor: "#e2ca80ff",
+        tabBarInactiveTintColor: "#e0b336ff",
         tabBarIcon: ({ color, size }) => {
           let iconName;
+
           if (route.name === "Home") iconName = "home";
           else if (route.name === "Treinos") iconName = "dumbbell";
           else if (route.name === "SOS") iconName = "alarm-light-outline";
           else if (route.name === "Blog")
             iconName = "newspaper-variant-outline";
+          else if (route.name === "Nós") iconName = "account-group-outline";
 
           return <Icon name={iconName} size={size} color={color} />;
         },
@@ -52,6 +55,7 @@ function Tabs() {
       <Tab.Screen name="Treinos" component={Treinos} />
       <Tab.Screen name="SOS" component={SOS} />
       <Tab.Screen name="Blog" component={Blog} />
+      <Tab.Screen name="Nós" component={Nós} />
     </Tab.Navigator>
   );
 }
@@ -66,6 +70,7 @@ export default function App() {
             component={SplashScreen}
             options={{ headerShown: false }}
           />
+
           <Stack.Screen
             name="Tabs"
             component={Tabs}
@@ -89,24 +94,8 @@ export default function App() {
               ),
             }}
           />
-          <Stack.Screen
-            name="Blog"
-            component={Blog}
-            options={{
-              headerStyle: { backgroundColor: "#e6e6e6ff" },
-              headerTintColor: "#1843a9",
-              title: "Detalhes do Produto",
-            }}
-          />
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{
-              headerStyle: { backgroundColor: "#e6e6e6ff" },
-              headerTintColor: "#1843a9",
-              title: "Detalhes do Produto",
-            }}
-          />
+
+          {/* BLOG CATEGORIAS */}
           <Stack.Screen
             name="BlogAquecimento"
             component={BlogAquecimento}
@@ -117,6 +106,7 @@ export default function App() {
               headerTitleStyle: { fontWeight: "bold" },
             }}
           />
+
           <Stack.Screen
             name="BlogAlongamento"
             component={BlogAlongamento}
@@ -127,6 +117,7 @@ export default function App() {
               headerTitleStyle: { fontWeight: "bold" },
             }}
           />
+
           <Stack.Screen
             name="BlogForca"
             component={BlogForca}
@@ -137,6 +128,7 @@ export default function App() {
               headerTitleStyle: { fontWeight: "bold" },
             }}
           />
+
           <Stack.Screen
             name="BlogPropriocepcao"
             component={BlogPropriocepcao}
@@ -147,16 +139,19 @@ export default function App() {
               headerTitleStyle: { fontWeight: "bold" },
             }}
           />
+
           <Stack.Screen
             name="BlogMobilidade"
             component={BlogMobilidade}
             options={{
-              title: "Propriocepção",
+              title: "Mobilidade",
               headerTintColor: "#1843a9",
               headerStyle: { backgroundColor: "#e8ba44" },
               headerTitleStyle: { fontWeight: "bold" },
             }}
           />
+
+          {/* LISTAS E EXERCICIOS */}
           <Stack.Screen
             name="MobilidadeList"
             component={MobilidadeList}
@@ -178,6 +173,7 @@ export default function App() {
               headerTitleStyle: { fontWeight: "bold" },
             }}
           />
+
           <Stack.Screen
             name="AquecimentoList"
             component={AquecimentoList}
@@ -199,6 +195,7 @@ export default function App() {
               headerTitleStyle: { fontWeight: "bold" },
             }}
           />
+
           <Stack.Screen
             name="ForcaPropriocepcaoList"
             component={ForcaPropriocepcaoList}
@@ -213,6 +210,16 @@ export default function App() {
           <Stack.Screen
             name="ForcaPropriocepcaoExercise"
             component={ForcaPropriocepcaoExercise}
+            options={{
+              title: "Exercício",
+              headerStyle: { backgroundColor: "#e8bb44" },
+              headerTintColor: "#1843a9",
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
+          />
+          <Stack.Screen
+            name="Nós"
+            component={Nós}
             options={{
               title: "Exercício",
               headerStyle: { backgroundColor: "#e8bb44" },

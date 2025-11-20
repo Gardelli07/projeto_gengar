@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     height: 220,
     marginBottom: 20,
     resizeMode: "contain",
+    borderRadius: 20,
   },
   title: {
     color: "#e8ba44",

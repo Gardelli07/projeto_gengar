@@ -1,13 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 
-// FontAwesome React Native
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import {
-  faBookMedical,
-  faTriangleExclamation,
-  faSuitcaseMedical,
-} from "@fortawesome/free-solid-svg-icons";
+// ÍCONES do react-native-vector-icons
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
 export default function BlogAquecimento() {
   return (
@@ -22,7 +18,13 @@ export default function BlogAquecimento() {
       <View style={styles.item}>
         <View style={styles.linhaTitulo}>
           <Text style={styles.numero}>1. Cuidados constantes</Text>
-          <FontAwesomeIcon icon={faBookMedical} size={18} />
+
+          {/* ÍCONE NOVO */}
+          <MaterialCommunityIcons
+            name="medical-bag"
+            size={20}
+            color="#1843a9"
+          />
         </View>
 
         <Text style={styles.bullet}>
@@ -46,7 +48,9 @@ export default function BlogAquecimento() {
       <View style={styles.item}>
         <View style={styles.linhaTitulo}>
           <Text style={styles.numero}>2. Atenção aos sinais do corpo</Text>
-          <FontAwesomeIcon icon={faTriangleExclamation} size={18} />
+
+          {/* ÍCONE NOVO */}
+          <FontAwesome5 name="exclamation-triangle" size={20} color="#1843a9" />
         </View>
 
         <Text style={styles.bullet}>
@@ -66,13 +70,18 @@ export default function BlogAquecimento() {
         Socorro Rápido {"\n"}(durante ou após o jogo)
       </Text>
 
-      {/* 1 - RICE */}
+      {/* 1 - PRICE */}
       <View style={styles.item}>
         <Text style={styles.numero}>1. Entorse ou torção</Text>
 
-        <Text style={styles.negrito}>SOS imediato: método RICE</Text>
+        <Text style={styles.negrito}>SOS imediato: método PRICE</Text>
 
-        <Text style={styles.bullet}>R – Repouso: pare o jogo.</Text>
+        <Text style={styles.bullet}>
+          P – Proteção: evite novos traumas na região já machucada.
+        </Text>
+        <Text style={styles.bullet}>
+          R – Repouso: pare o jogo e descanse em uma posição confortável.
+        </Text>
         <Text style={styles.bullet}>
           I – Ice (gelo): aplique 15–20 min, a cada 2h nas primeiras 24h.
         </Text>
@@ -158,7 +167,9 @@ export default function BlogAquecimento() {
       <View style={styles.item}>
         <View style={styles.linhaTitulo}>
           <Text style={styles.numero}>5. Situações de emergência</Text>
-          <FontAwesomeIcon icon={faSuitcaseMedical} size={18} />
+
+          {/* ÍCONE NOVO */}
+          <FontAwesome5 name="medkit" size={20} color="#1843a9" />
         </View>
 
         <Text style={styles.bullet}>
@@ -200,7 +211,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 
-  /* NOVO — alinhamento dos ícones */
   linhaTitulo: {
     flexDirection: "row",
     alignItems: "center",
@@ -231,9 +241,7 @@ const styles = StyleSheet.create({
     height: 200,
     borderRadius: 8,
     marginTop: 10,
-    rowGap: 10,
     alignSelf: "center",
-    //borderRadius: 300,
   },
   parenteses: {
     fontSize: 14,
